@@ -5,11 +5,13 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.GraphicsEnvironment;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -88,6 +90,12 @@ public class GUI extends JFrame implements ActionListener, ItemListener, Runnabl
 		g.setColor(new Color(red,green,blue));
 		
 		g.drawString(message, 20, 200);
+		
+		Image image = new ImageIcon("images\\zero.jpg").getImage();
+		
+		g.drawImage(image, 20,400,20,20,null);
+		
+		System.out.println(image);
 	}
 
 	@Override
